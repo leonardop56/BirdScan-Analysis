@@ -9,3 +9,5 @@ The first part of the notebook deals with reading the MTR calculated with the MR
 The second part of the notebook is aimed at analyzing the distribution of altitude, direction, and speed for the different classes of targets (birds and insects) detected by the radar. The data analyzed in the second part is extracted directly from the PostgreSQL database through pgAdmin, and stored in the file “data_20210907.csv”. The file name refers to the date of extraction of the data: 07-09-2021. The pgAdmin query to extract the data has been uploaded to this folder with the name “query_pgAdmin_20210907.sql”. To connect to the BirdScan database through pgAdmin follow the instructions “birdscan_accessDB_instructions.pdf” in the Documentation folder.
 
 In the last part of the notebook is shown the relationship between insects’ MTR and air temperature at ARTIS.
+
+Some results of the analysis are shown in "BirsdScan_Analysis_20211019.pptx".
