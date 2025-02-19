@@ -1,13 +1,23 @@
-The Jupyter Notebook “Notebook_BirdScan.ipynb” is a collection of Python3 scripts to analyze data from the Swiss bird radar (BirdScan MR1) owned by the University of Amsterdam and located at ARTIS Amsterdam Royal Zoo since February 2021. 
+Created by: Leonardo Porcacchia, 08-10-2021
+Modified by: Leonardo Porcacchia, 19-02-2025
+leonardo.porcacchia@gmail.com
 
-The data, before being analyzed, needs to be saved to your machine. 
 
-I have previously calculated the average MTR per day/night and the MTR per hour for the period between 11-03-2021 and 01-09-2021. The resulting data is stored in the “rds” files. The name of the files contains the period of MTR calculation (“20210311_20210901”), the time resolution (either “3600s” or “dayNight”), the height interval (“25m-1025m”), number of bins in height (“1bin”), type of echoes (“in” for insects, “pawaswlabifl” for passerine, wader, swift, large single bird, flock, and unidentified bird together), roation (“rot”), and type of pulse (“pulse-S” for short-pulse only). I also saved some plots created in R to the folder “Plots”.
+The notebook Notebook_BirdScan.ipynb is a collection of Python3 scripts aimed at analyzing data from the Swiss bird radar (BirdScan MR1), owned by the University of Amsterdam and situated at ARTIS Amsterdam Royal Zoo in February 2021.
 
-The first part of the notebook deals with reading the MTR calculated with the MR1 Analysis Tool and plotting it for every month between March ans September 2021. Also, it analyzes the dependency of MTR on the hour of the day across the months.  
+I personally contributed to the installation and maintenance of the bird radar and collected data between February and October 2021. 
 
-The second part of the notebook is aimed at analyzing the distribution of altitude, direction, and speed for the different classes of targets (birds and insects) detected by the radar. The data analyzed in the second part is extracted directly from the PostgreSQL database through pgAdmin, and stored in the file “data_20210907.csv”. The file name refers to the date of extraction of the data: 07-09-2021. The pgAdmin query to extract the data has been uploaded to this folder with the name “query_pgAdmin_20210907.sql”. To connect to the BirdScan database through pgAdmin follow the instructions “birdscan_accessDB_instructions.pdf” in the Documentation folder.
+Swiss Birdradar Solution (SBRS) is the radar manufacturer. It has developed an analysis tool in R to extract data from the BirdScan PostgreSQL database and calculate the Migration Traffic Rate (MTR). Please refer to the Bird Scan Community public GitHub repository:
+https://github.com/BirdScanCommunity/birdscanR/tree/develop/R
 
-In the last part of the notebook is shown the relationship between insects’ MTR and air temperature at ARTIS.
+In the Documentation folder of this repository, you can find the radar documentation provided by SBRS, as well as the R function AnalyzeData.R, which has been modified from the original SBRS version to account for the location of the University of Amsterdam radar, for the connection to the PostgreSQL database, and for the calculation of the MTR for insects in addition to birds.
 
-Some results of the analysis are shown in "BirsdScan_Analysis_20211019.pptx".
+I calculated the average MTR per day/night and the MTR per hour for the period between 11-03-2021 and 01-09-2021. The resulting data is stored in the Data folder as rds files. The filenames contain the period of MTR calculation (20210311_20210901), the time resolution (either 3600s or dayNight), the height interval (25m-1025m), the number of bins in height (1bin), the type of echoes (in for insects, pawaswlabifl for passerine, wader, swift, large single bird, flock, and unidentified bird together), the rotation (rot), and the type of pulse (pulse-S for short-pulse only). I also saved some plots created in R to the Plots folder.
+
+The first part of the notebook deals with reading the MTR calculated with the adjusted tool and plotting it for every month between March and September 2021. It also analyzes the dependency of MTR on the hour of the day across the months.  
+
+The second part of the notebook focuses on analyzing the distribution of altitude, direction, and speed for the different classes of targets (birds and insects) detected by the radar. The data for this section has been extracted directly from the PostgreSQL database via pgAdmin and stored in the Data folder under the name data_20210907.csv. The file name refers to the date of data extraction: 07-09-2021. The pgAdmin query used for data extraction has been uploaded to this repository as query_pgAdmin.sql. To connect to the BirdScan database you need permission and credentials from SBRS.
+
+In the last part of the notebook, the relationship between insects’ MTR and air temperature at ARTIS is analyzed.  
+    
+Lastly, a summary of the notebook’s results can be found in the presentation BirdScan_Analysis_20211008.pptx.
