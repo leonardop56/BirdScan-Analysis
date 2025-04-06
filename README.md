@@ -13,7 +13,7 @@ https://github.com/BirdScanCommunity/birdscanR/tree/develop/R
 
 The tool in R has been modified to account for the location of our radar, and for the calculation of the MTR for insects in addition to birds.
 
-I calculated the average MTR per day/night and the MTR per hour for the period between 11-03-2021 and 01-09-2021. The resulting data is stored in the Data folder as rds files. The filenames contain the period of MTR calculation (*20210311_20210901*), the time resolution (either *3600s* or *dayNight*), the height interval (*25m-1025m*), the number of bins in height (*1bin*), the type of echoes (*in* for insects, *pawaswlabifl* for passerine, wader, swift, large single bird, flock, and unidentified bird together), the rotation (*rot*), and the type of pulse (*pulse-S* for short-pulse only).
+I calculated the average MTR per day/night and the MTR per hour for the period between 11-03-2021 and 01-09-2021. The resulting data is stored in the *Data* folder as rds files. The filenames contain the period of MTR calculation (*20210311_20210901*), the time resolution (either *3600s* or *dayNight*), the height interval (*25m-1025m*), the number of bins in height (*1bin*), the type of echoes (*in* for insects, *pawaswlabifl* for passerine, wader, swift, large single bird, flock, and unidentified bird together), the rotation (*rot*), and the type of pulse (*pulse-S* for short-pulse only).
 
 The first part of the notebook deals with reading the MTR calculated with the adjusted tool and plotting it for every month between March and September 2021. It also analyzes the dependency of MTR on the hour of the day across the months.  
 
