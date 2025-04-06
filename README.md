@@ -8,7 +8,7 @@ To run the notebook you need first to extract the compressed data available in t
 
 I personally contributed to the installation and maintenance of the bird radar and collected data between February and October 2021. 
 
-Swiss Birdradar Solution (SBRS) is the radar manufacturer. Together with the Birdradar Community it has developed an analysis tool in R to extract data from the SBRS PostgreSQL database and calculate the Migration Traffic Rate (MTR). Please refer to the Bird Scan Community public GitHub repository:
+Swiss Birdradar Solution (SBRS) is the radar manufacturer. Together with the Birdradar Community has developed an analysis tool in R to extract data from the SBRS PostgreSQL database and calculate the Migration Traffic Rate (MTR). Please refer to the Bird Scan Community public GitHub repository:
 https://github.com/BirdScanCommunity/birdscanR/tree/develop/R
 
 The tool in R has been modified to account for the location of our radar, and for the calculation of the MTR for insects in addition to birds.
