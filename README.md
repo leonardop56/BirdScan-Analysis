@@ -1,3 +1,88 @@
+# BirdScan Radar Data Analysis
+
+This repository contains the Jupyter notebook `Notebook_BirdScan.ipynb`, which includes a series of Python 3 scripts for analyzing data collected from the **Swiss bird radar (BirdScan MR1)**, owned by the **University of Amsterdam** and installed at **ARTIS Amsterdam Royal Zoo** in February 2021.
+
+---
+
+## 📅 Project Timeline
+
+- **Radar Installation & Maintenance**: February – October 2021  
+- **Data Analysis Period**: March 11, 2021 – September 1, 2021  
+
+I personally contributed to the radar’s installation, maintenance, and data collection during this period.
+
+---
+
+## 🛠️ Tools & Data Sources
+
+- **Radar Manufacturer**: Swiss Birdradar Solution (SBRS)
+- **Analysis Tool**: [birdscanR (R package)](https://github.com/BirdScanCommunity/birdscanR/tree/develop/R)
+  - Developed by SBRS & BirdRadar Community
+  - Customized for ARTIS location and insect MTR calculation
+- **Database**: SBRS PostgreSQL (via `pgAdmin`)
+- **Environment**: Python 3, R
+
+---
+
+## 📂 Data Description
+
+MTR (Migration Traffic Rate) was calculated using the modified R tool. The processed `.rds` files are stored in the `Data/` folder and include:
+
+- **Period**: `20210311_20210901`
+- **Resolution**: `3600s` (hourly) or `dayNight`
+- **Height Interval**: `25m–1025m`
+- **Bins**: `1bin`
+- **Echo Types**:
+  - `in`: insects
+  - `pawaswlabifl`: various bird types
+- **Rotation**: `rot`
+- **Pulse**: `pulse-S` (short-pulse only)
+
+---
+
+## 📓 Notebook Overview
+
+### 1. **Migration Traffic Rate (MTR) Analysis**
+
+- Extracts daily and hourly MTR for March–September 2021
+- Visualizes monthly and hourly trends
+
+### 2. **Target Classification & Movement Analysis**
+
+- Analyzes altitude, direction, and speed of different targets (birds/insects)
+- Uses data extracted via `pgAdmin` (`data_20210907.csv`)
+- Corresponding SQL query: `query_pgAdmin.sql`
+
+> ⚠️ **Note**: Access to the BirdScan database requires permission from SBRS.
+
+### 3. **Environmental Correlation**
+
+- Explores the relationship between insect MTR and air temperature at ARTIS
+
+---
+
+## 📊 Results Summary
+
+A PDF presentation summarizing key findings is available here:  
+📄 `BirdScan_Analysis_20211008.pdf`
+
+---
+
+## ✅ How to Use
+
+1. Clone this repository
+2. Ensure you have the required Python and R environments
+3. Open and run `Notebook_BirdScan.ipynb`
+
+---
+
+## 📬 Contact
+
+For questions or access permissions, please contact SBRS or the BirdRadar Community.
+
+
+
+
 The notebook *Notebook_BirdScan.ipynb* is a collection of Python3 scripts aimed at analyzing data from the Swiss bird radar (BirdScan MR1), owned by the University of Amsterdam and situated at ARTIS Amsterdam Royal Zoo in February 2021.
 
 I personally contributed to the installation and maintenance of the bird radar at ARTIS and collected data between February and October 2021. 
