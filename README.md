@@ -1,6 +1,6 @@
 # BirdScan Radar Data Analysis
 
-This repository contains the Jupyter notebook `Notebook_BirdScan.ipynb`, which includes a series of Python 3 scripts developed to analyze data from the **Swiss bird radar (BirdScan MR1)**. This radar is owned by the **University of Amsterdam** and was installed at **ARTIS Amsterdam Royal Zoo** in February 2021.
+This repository contains the Jupyter notebook `Notebook_BirdScan.ipynb`, which includes a series of Python 3 scripts developed to analyze data from the **Swiss bird radar (BirdScan MR1)**, in the context of bird/insect movement over Amsterdam during spring migration. This radar is owned by the **University of Amsterdam** and was installed at **ARTIS Amsterdam Royal Zoo** in February 2021.
 
 ---
 
