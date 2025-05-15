@@ -1,7 +1,3 @@
-Created by: Leonardo Porcacchia, 08-10-2021  
-leonardo.porcacchia@gmail.com
-
-
 The notebook *Notebook_BirdScan.ipynb* is a collection of Python3 scripts aimed at analyzing data from the Swiss bird radar (BirdScan MR1), owned by the University of Amsterdam and situated at ARTIS Amsterdam Royal Zoo in February 2021.
 
 To run the notebook you need first to extract the compressed data available in the *Data* folder.
